@@ -13,4 +13,4 @@
 	Then:
 	    ``` git commit -m "<message/reason to commit>"```
 6. Now, push the code to github
-	``` git push -u origin ```
+	``` git push -u origin main```
