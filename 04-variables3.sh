@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Declaring the variables
-PERSON1=Ramesh #no space between key and value
-PERSON2=Surya
+#Declaring the variables with arguments
+PERSON1=$1
+PERSON2=$2
 
 #Reffering the variables
 echo "$PERSON1:Hello, $PERSON2, How are you?"
