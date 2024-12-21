@@ -13,3 +13,5 @@ echo "The username is: $USERNAME and the password is: $PASSWORD"
 #Please enter you password::
 #surya242
 #The username is: surya and the password is: surya242
+
+#NOTE: Here the problem is the username and password will be visible on the terminal, we can overcome this by adding -s after read command, refer 06-variables5.sh
