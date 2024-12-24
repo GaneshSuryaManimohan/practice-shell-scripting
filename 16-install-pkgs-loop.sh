@@ -21,9 +21,9 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "Installation of $i.....$R FAILURE $N"
+        echo -e "$2.....$R FAILURE $N"
     else
-        echo -e "Installation of $i.....$G SUCCESS $N"
+        echo -e "$2.....$G SUCCESS $N"
     fi
 }
 
@@ -31,7 +31,7 @@ for i in $@
 do
     echo "Package to Install:: $i"
     dnf list installed $i &>>$LOG_FILE
-    if [ $i -eq 0 ]
+    if [ $? -eq 0 ]
     then
         echo -e "$i is already installed.....$Y SKIPPING $N"
     else
