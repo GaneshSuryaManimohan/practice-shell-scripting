@@ -6,7 +6,7 @@ SCRIPT_NAME=$(echo $0)
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP
 R="\e[31m"
 G="\e[32m"
-Y="\e[31m"
+Y="\e[33m"
 N="\e[0m"
 P="\e[35m"
 echo "Script Start-Time is:: $TIME_STAMP"
