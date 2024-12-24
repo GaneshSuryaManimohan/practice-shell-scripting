@@ -1,5 +1,10 @@
 #!/bin/bash
 
+TIME_STAMP=$(date +%F-%H:%M:%S)
+SCRIPT_NAME=$($0 |cut -d "." -f1)
+LOG_FILE=/tmp/$SCRIPT_NAME/$TIME_STAMP
+
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
@@ -20,8 +25,8 @@ else
     echo "Running this script as a root user"
 fi
 
-dnf install mysql -y
+dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing MYSQL"
 
-dnf install git -y
+dnf install git -y &>>$LOG_FILE
 VALIDATE $? "Installing GIT"
