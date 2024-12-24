@@ -14,7 +14,7 @@ if [ $USERID -ne 0 ]
 then
     echo -e "\e[31m Please Run this Script as super User"
     else
-        echo "\e[35m Running the Script as super User"
+        echo -e "\e[35m Running the Script as super User"
 fi
 
 VALIDATE(){
