@@ -36,4 +36,5 @@ do
     else
         dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "Installation of $i"
+    fi
 done
