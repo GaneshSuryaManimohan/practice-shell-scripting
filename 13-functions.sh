@@ -9,10 +9,10 @@ LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2.....\e[31m FAILURE"
+        echo -e "$2.....\e[31m FAILURE \e[0m"
         exit 1
     else
-        echo -e "$2.....\e[32m SUCCESS"
+        echo -e "$2.....\e[32m SUCCESS \e[0m"
     fi
 }
 
@@ -37,3 +37,4 @@ VALIDATE $? "Installing GIT"
 # \e[32m is for green color
 # \e33m is for yellow color
 # \e[34m is for blue color
+# \e[0m is for normal color
