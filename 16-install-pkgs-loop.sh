@@ -23,6 +23,7 @@ VALIDATE(){
         echo -e "Installation of $i.....$R FAILURE $N"
     else
         echo -e "Installation of $i.....$G SUCCESS $N"
+    fi
 }
 
 for i in $@
