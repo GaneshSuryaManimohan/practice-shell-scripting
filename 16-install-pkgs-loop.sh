@@ -19,7 +19,7 @@ then
 fi
 
 VALIDATE(){
-    if [ $1 -ne 0 ]
+    if [ $1 -ne 0 ] #if $?-previous exit status is not zero, then installation will show failure else success
     then
         echo -e "$2.....$R FAILURE $N"
     else
@@ -31,7 +31,7 @@ for i in $@
 do
     echo "Package to Install:: $i"
     dnf list installed $i &>>$LOG_FILE
-    if [ $? -eq 0 ]
+    if [ $? -eq 0 ] #if package is already installed then it will skip else it will install
     then
         echo -e "$i is already installed.....$Y SKIPPING $N"
     else
