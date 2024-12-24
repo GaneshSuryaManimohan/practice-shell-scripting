@@ -8,13 +8,14 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[31m"
 N="\e[0m"
+P="\e[35m"
 echo "Script Start-Time is:: $TIME_STAMP"
 
 if [ $USERID -ne 0 ]
 then
-    echo -e "\e[31m Please Run this Script as super User"
+    echo -e "$R Please Run this Script as super User $N"
     else
-        echo -e "\e[35m Running the Script as super User"
+        echo -e "\e[35m Running the Script as super User $N"
 fi
 
 VALIDATE(){
