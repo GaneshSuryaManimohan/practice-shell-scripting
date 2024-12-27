@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x #if there is an error the script will stop running if we use this command in shell scripting
+set -e #if there is an error the script will stop running if we use this command in shell scripting
 
 USERID=$(id -u)
 
