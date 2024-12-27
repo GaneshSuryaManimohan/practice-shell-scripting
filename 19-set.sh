@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e #if there is an error the script will stop running if we use this command in shell scripting
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
