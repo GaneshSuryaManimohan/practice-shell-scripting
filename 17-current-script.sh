@@ -4,4 +4,8 @@
 COURSE="DevOps with AWS"
 
 echo "Before calling the other script, course:: $COURSE"
-echo "Process ID of the current shell script: $$" 
+echo "Process ID of the current shell script: $$"
+
+./18-other-script.sh
+
+echo "After calling other script, course:: $COURSE"
