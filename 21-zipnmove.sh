@@ -24,13 +24,13 @@ do
 done <<< $FILES
 
 COMPRSD_FILES=$(find $SOURCE_DIR -name "*.gz")
-echo -e "Moving the compressed files $G $COMPRSD_FILES $N to /home/ec2-user/test"
-if [ -z "$COMPRS_FILES" ]; 
+#echo -e "Moving the compressed files $G $COMPRSD_FILES $N to /home/ec2-user/test"
+if [ -z "$COMPRSD_FILES" ]; 
 then
+    mv /tmp/app-logs/*.gz /home/ec2-user/test
+else
     echo -e "$Y No files to compress in $COMPRSD_FILES $N"
     exit 0 # Exit if no files were found
-else
-    mv /tmp/app-logs/*.gz /home/ec2-user/test
 fi
 
 #To find the files older than 2days in current directory:
