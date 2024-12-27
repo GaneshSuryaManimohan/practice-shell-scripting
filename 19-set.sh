@@ -2,6 +2,13 @@
 
 set -e #if there is an error the script will stop running if we use this command in shell scripting
 
+#to identify at which line and which command caused the error, we can use below trap command with a failure function:
+
+failure(){
+    echo "Failed at $1::$2"
+}
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
