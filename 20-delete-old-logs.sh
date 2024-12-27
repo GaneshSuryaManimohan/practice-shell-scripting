@@ -15,7 +15,7 @@ else
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
-echo "$Y Files older than 14days:: $N"
+echo "$Y Files older than 14days:: $FILES $N"
 
 #To find the files older than 14days in current directory:
 # find . -name "*.log" -mtime +14
