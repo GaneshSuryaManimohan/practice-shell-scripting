@@ -6,7 +6,7 @@ MSG=""
 
 while IFS= read -r line
 do
-    USAGE=$(echo $line | awk -F " " '{print $6F}'|cut -d "%" -f1 )
+    USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1 )
     FOLDER=$(echo $line |awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
@@ -15,4 +15,4 @@ do
 done <<< $DISK_USAGE
 echo -e "Message: $MSG"
 
-echo "$MESSAGE" | mail -s "Disk Usage Alert" surya.manimohan@gmail.com
+echo "$MSG" | mail -s "Disk Usage Alert" surya.manimohan@gmail.com 2>> /tmp/mail_error.log
