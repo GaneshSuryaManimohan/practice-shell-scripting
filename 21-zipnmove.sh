@@ -24,7 +24,7 @@ do
 done <<< $FILES
 
 COMPRSD_FILES=$(find $SOURCE_DIR -name "*.gz")
-echo -e "$G Moving the compressed files $COMPRSD_FILES $N"
+echo -e "Moving the compressed files $G $COMPRSD_FILES $N to /home/ec2-user/test"
 mv /tmp/app-logs/*.gz /home/ec2-user/test
 
 #To find the files older than 14days in current directory:
