@@ -15,7 +15,7 @@ else
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
-echo -e "Files older than 14days in $SOURCE_DIR are:: $Y $FILES $N "
+#echo -e "Files older than 14days in $SOURCE_DIR are:: $Y $FILES $N "
 
 while IFS= read -r line #IFS is Internal Field Separator
 do
