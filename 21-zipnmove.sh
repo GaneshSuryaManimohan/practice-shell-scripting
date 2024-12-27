@@ -19,7 +19,7 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +2)
 
 while IFS= read -r line #IFS is Internal Field Separator
 do
-    echo "Compressing files: $line"
+    echo "Compressing files: $Y $line $N"
     gzip -f $line
 done <<< $FILES
 
