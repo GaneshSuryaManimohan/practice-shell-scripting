@@ -20,8 +20,11 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +2)
 while IFS= read -r line #IFS is Internal Field Separator
 do
     echo "Compressing files: $line"
-    gzip -f $line && mv *.gz /home/ec2-user/test
+    gzip -f $line
 done <<< $FILES
+
+echo -e "$G Moving the compressed files $N"
+mv /tmp/app-logs/*.gz /home/ec2-user/test
 
 #To find the files older than 14days in current directory:
 # find . -name "*.log" -mtime +14
