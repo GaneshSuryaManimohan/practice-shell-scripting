@@ -15,7 +15,7 @@ else
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +2)
-#echo -e "Files older than 14days in $SOURCE_DIR are:: $Y $FILES $N "
+#echo -e "Files older than 2days in $SOURCE_DIR are:: $Y $FILES $N "
 
 while IFS= read -r line #IFS is Internal Field Separator
 do
@@ -27,5 +27,5 @@ COMPRSD_FILES=$(find $SOURCE_DIR -name "*.gz")
 echo -e "Moving the compressed files $G $COMPRSD_FILES $N to /home/ec2-user/test"
 mv /tmp/app-logs/*.gz /home/ec2-user/test
 
-#To find the files older than 14days in current directory:
-# find . -name "*.log" -mtime +14
+#To find the files older than 2days in current directory:
+# find . -name "*.log" -mtime +2
