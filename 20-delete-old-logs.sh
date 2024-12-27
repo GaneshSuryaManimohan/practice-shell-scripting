@@ -17,10 +17,10 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo -e "Files older than 14days in $SOURCE_DIR are:: $Y $FILES $N "
 
-while IFS= read -r line
+while IFS= read -r line #IFS is Internal Field Separator
 do
     echo "Deleting files: $line"
-
+    rm -rf $line
 done <<< $FILES
 
 #To find the files older than 14days in current directory:
