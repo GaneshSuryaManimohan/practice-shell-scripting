@@ -16,3 +16,11 @@ dnf install mysqllala -y
 dnf install git -y
 
 echo "is script still proceeding even after error?"
+
+
+#output: As we gave wrong package name mysqllala the script exited without proceeding to next step
+# sudo sh 19-set.sh
+# Running this script as a root user
+# Last metadata expiration check: 0:01:45 ago on Fri Dec 27 09:51:28 2024.
+# No match for argument: mysqllala
+# Error: Unable to find a match: mysqllala
